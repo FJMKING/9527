@@ -35,7 +35,7 @@ exports.cssLoaders = function (options) {
     loader: 'px2rpx-loader',
     options: {
       baseDpr: 1,
-      rpxUnit: 1
+      rpxUnit: 0.5
     }
   }
 
@@ -69,7 +69,9 @@ exports.cssLoaders = function (options) {
     wxss: generateLoaders(),
     postcss: generateLoaders(),
     less: generateLoaders('less'),
-    sass: generateLoaders('sass', { indentedSyntax: true }),
+    sass: generateLoaders('sass', {
+      indentedSyntax: true
+    }),
     scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
