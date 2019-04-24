@@ -48,13 +48,13 @@
     <div class="bar">
       <div class="bar-list">
         <div class="bl-show">
-          <img :src="Url+'clubs.svg'">
+          <img v-if="Url" :src="Url+'clubs.svg'">
         </div>
         <div class="bl-title">社团招新</div>
       </div>
       <div class="bar-list">
         <div class="bl-show">
-          <img :src="Url+'meeting.svg'">
+          <img v-if="Url" :src="Url+'meeting.svg'">
         </div>
         <div class="bl-title">讲座报名</div>
 
@@ -62,7 +62,7 @@
       <div class="bar-list">
         <div class="bl-show">
 
-          <img :src="Url+'recruitment.svg'">
+          <img v-if="Url" :src="Url+'recruitment.svg'">
         </div>
         <div class="bl-title">干部招新</div>
 
@@ -70,7 +70,7 @@
       <div class="bar-list">
         <div class="bl-show">
 
-          <img :src="Url+'jiangbei_bisai.svg'">
+          <img v-if="Url" :src="Url+'jiangbei_bisai.svg'">
         </div>
         <div class="bl-title">比赛报名</div>
 
@@ -86,7 +86,7 @@
     <div class="hot-bar-list" v-if="currenIndex===0">
       <div class="list-item" v-for="item in [0,1,2]" :key="item">
         <div class="list-left">
-          <img :src="Url+'u74.png'" >
+          <img v-if="Url" :src="Url+'u74.png'" >
         </div>
         <div class="list-center">
           <div class="lc-title">某某大学游泳协会</div>
@@ -97,7 +97,7 @@
         <div class="list-right">
             <div class="lr-order">已结束</div>
             <div class="lr-go">
-            <img :src="Url+'u26.png'" alt="">
+            <img v-if="Url" :src="Url+'u26.png'" alt="">
 
             </div>
         </div>
@@ -107,7 +107,7 @@
         v-if="hasMore"
         class="loding-it"
       >
-        <img :src="Url+'loading.gif'">
+        <img v-if="Url" :src="Url+'loading.gif'">
       </div>
       <div v-if="!hasMore">加载更多</div>
     </div>
@@ -123,7 +123,7 @@ export default {
     return {
       Url: '',
       array: ['东莞市', '广州市', '阳江市', '珠海市'],
-      hotBarTip: ['热门招新', '热门比赛', '热门讲座'],
+      hotBarTip: ['综合排序', '热门活动', '最新发布'],
       currenIndex: 0,
       index: 0,
       searchValue: '',
