@@ -26,7 +26,7 @@
   "dependencies": {
     "css-scss": "^0.1.1",
     "mpvue": "^2.0.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "npm-sass": "^2.3.0",
     "vuex": "^3.0.1"
   },
